@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView tvHello;
@@ -103,6 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             tvResults.setText("= " + result);
+            Log.d("Calculation", "Result = " + result);
+
+            Toast.makeText(MainActivity.this, "Result = " + result, Toast.LENGTH_SHORT).show();
         }
     }
 }
