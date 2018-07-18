@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText editText2;
     TextView tvResults;
     Button btnCalculate;
+
+    RadioGroup rgOperator;
 
 
     @Override
@@ -54,9 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Start here
         editText1 = findViewById(R.id.editText1);
         editText2 = findViewById(R.id.editText2);
-        tvResults  = findViewById(R.id.tvResults);
+        tvResults = findViewById(R.id.tvResults);
         btnCalculate = findViewById(R.id.btnCalculate);
         btnCalculate.setOnClickListener(this);
+
+        rgOperator = findViewById(R.id.rgOperator);
 
     }
 
@@ -64,19 +70,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == btnCopy) {
             tvHello.setText(editTextHello.getText());
-        } else if (v == btnCalculate){
+        } else if (v == btnCalculate) {
             int number1 = 0;
             int number2 = 0;
-            int result;
+            int result = 0;
             try {
                 number1 = Integer.parseInt(editText1.getText().toString());
-            } catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
             }
             try {
                 number2 = Integer.parseInt(editText2.getText().toString());
-            } catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
             }
-            result = number1 + number2;
+
+
+            // Check Operator
+            switch (rgOperator.getCheckedRadioButtonId()) {
+                case R.id.rbPlus:
+                    result = number1 + number2;
+                    break;
+                case R.id.rbMinus:
+                    result = number1 - number2;
+                    break;
+                case R.id.rbMultiply:
+                    result = number1 * number2;
+                    break;
+                case R.id.rbDivide:
+                    result = number1 / number2;
+                    break;
+
+                    // Add case here
+            }
+
             tvResults.setText("= " + result);
         }
     }
