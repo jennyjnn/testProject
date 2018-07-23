@@ -114,7 +114,7 @@
     </RadioGroup>
 
     <ProgressBar
-        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        style="@style/ProgressBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:indeterminate="true"
