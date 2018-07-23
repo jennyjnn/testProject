@@ -136,7 +136,7 @@
             android:src="@drawable/ic_launcher"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:background="@android:color/transparent"
+            android:background="@drawable/btn_default_normal"
             android:layout_weight="1"/>
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
             android:layout_width="0dp"
