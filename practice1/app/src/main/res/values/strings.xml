@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Practice 1</string>
+    <string name="calculate">calculate</string>
+    <string name="settings">Settings</string>
 </resources>
