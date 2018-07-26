@@ -118,6 +118,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             tvResults.setText("= " + result);
             Log.d("Calculation", "Result = " + result);
+            Log.i("Cal2",result+"");
+            Log.w("Cal3",result+"");
+            Log.e("Cal4",result+"");
 
             Toast.makeText(MainActivity.this, "Result = " + result, Toast.LENGTH_SHORT).show();
         }
