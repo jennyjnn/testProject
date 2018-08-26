@@ -88,7 +88,7 @@ public class CustomView extends View {
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
     }
