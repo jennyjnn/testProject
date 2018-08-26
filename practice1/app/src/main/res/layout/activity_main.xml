@@ -132,6 +132,8 @@
                 android:indeterminate="true"
                 android:progress="30" />
 
+            <include layout="@layout/sample_bar" />
+
             <com.example.jenny.practice1.CustomViewGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
