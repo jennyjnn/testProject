@@ -76,8 +76,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="20dp"
             android:text="Skip"
-            android:textColor="#ffffff"
-            android:textSize="14sp" />
+            style="@style/TextViewStyle.green" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,8 +84,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="4dp"
             android:text="By continuing. you accept the Term of Use and Privacy Policy"
-            android:textColor="#ffffff"
-            android:textSize="14sp" />
+            style="@style/TextViewStyle"/>
 
 
     </LinearLayout>
