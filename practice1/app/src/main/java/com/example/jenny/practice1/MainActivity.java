@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     RadioGroup rgOperator;
 
+    CustomViewGroup viewGroup1;
+    CustomViewGroup viewGroup2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCalculate.setOnClickListener(this);
 
         rgOperator = findViewById(R.id.rgOperator);
+
+        viewGroup1 = findViewById(R.id.viewGroup1);
+        viewGroup2 = findViewById(R.id.viewGroup2);
+
+        viewGroup1.setButtonText("Hello");
+        viewGroup2.setButtonText("World");
 
     }
 
