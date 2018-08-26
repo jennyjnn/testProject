@@ -142,6 +142,10 @@
             <com.example.jenny.practice1.CustomView
                 android:layout_width="match_parent"
                 android:layout_height="160dp" />
+            <com.example.jenny.practice1.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:isBlue="true"/>
 
             <View
                 android:layout_width="match_parent"
