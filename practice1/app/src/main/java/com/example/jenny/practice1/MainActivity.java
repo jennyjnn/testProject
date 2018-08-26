@@ -1,5 +1,6 @@
 package com.example.jenny.practice1;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -132,6 +133,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.e("Cal4",result+"");
 
             Toast.makeText(MainActivity.this, "Result = " + result, Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this,
+                    SecondActivity.class);
+            intent.putExtra("result", result);
+            startActivity(intent);
         }
     }
 
